@@ -37,8 +37,8 @@ class S3CachedBucket(S3Boto3Storage):
         return self._exists_local(name) or super(S3CachedBucket, self).exists(name)
 
     def save(self, name, content, max_length=None):
-        ret = super(S3CachedBucket, self).save(name, content, max_length)
         self._save_to_local_storage(name, content)
+        ret = super(S3CachedBucket, self).save(name, content, max_length)
         return ret
 
     def open(self, name, mode='rb'):

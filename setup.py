@@ -20,8 +20,7 @@ setup(
     author='NyanKiyoshi',
     author_email='hello@vanille.bid',
     url='https://github.com/NyanKiyoshi/%s' % PKG_NAME,
-
-    version='0.0.0rc0',
+    version='0.0.0rc1',
     name=PKG_NAME,
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
